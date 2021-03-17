@@ -1,5 +1,7 @@
-#Run ptyon
+#########################Run ptyon########################
+#print name
 print("Tyler Westbrook")
+#print song lyrics
 print("Never gonna give you up")
 print("Never gonna let you down")
 print("Never gonna run around and desert you")
@@ -8,71 +10,94 @@ print("Never gonna say goodbye")
 print("Never gonna tell a lie and hurt you")
 print()
 
-#variables
+#########################variables########################
+#make a program that displays several numbers
 print(1,2,3,4,5)
+#make a program that solves and shows the summation of 64+32
 print(64+32)
+#do  the same as above, but sum x + y
 x = 7
 y = 2
 print(x+y)
 print()
 
-#Strings
+#########################Strings########################
+#make program that displays favorite actor
 print("Eddie Murphy")
-s = "lucky" 
-print(s)
+
+#print lucky inside s
+s = "i am lucky"
+print(s[5:10])
+#print current day
 print("Today is 3/15/2021")
 print()
 
-#String Replace
+#########################String Replace########################
+#test string replace
 txt = "abc 123 abc 123"
 print(txt)
 x = txt.replace("abc","cba",1)
 y = txt.replace("123","321",1)
 print(x)
 print(y)
+#string can be replaced twice, indicated above
+#replace works with both words and phrases, it just depends on the input to the function
 
-#String Find
+#########################String Find########################
+#is string.find() case sensitive?
 print(txt.find("abc"))
 print(txt.find("Abc"))
+#yes
+#what if occurence appears twice in string?
+#the first element is displayed 
+#Write a program that asks console input and searches for a query.
 input1 = input()
 print(txt.find(input1))
 print()
 
-#String Join
+#########################String Join########################
+#Create a list of words and join them, like the example above.
 mylist = ["red","blue","green"]
 print(mylist)
+#Try changing the separator string from a space to an underscore.
 z = "_".join(mylist)
 print(z)
 print() 
 
-#String Split
+########################String Split########################
+#Can a string be split on multiple characters?
+#yes, a string can be split on mult chars
+#Can you split a string this string?: World,Earth,America,Canada
 txt1 = "World,Earth,America,Canada"
 print(txt1.split(","))
 print()
+#Given an article, can you split it based on phrases?
+#yes, you could use article.split("phrase")
 
-#Random numbers
+########################Random numbers##################
+#Make a program that creates a random number and stores it into x.
 from random import seed
 from random import randint
 seed(1)
 
 x = randint(0,10)
-
+#Make a program that prints 3 random numbers.
 print(randint(0,1000000000),randint(0,1000000000),randint(0,1000000000))
-
+#Create a program that generates 100 random numbers and find the frequency of each number
 randomIntList = []
 for x in range(100):
   randomIntList.append(randint(0,10))
-
 for x in range(10):
   print(randomIntList.count(x))
-
 print() 
-#Keyboard Input
+
+
+#########################Keyboard Input########################
 phone = input("Please enter your phone number:")
 lang = input("Please enter your preferred programming language:")
 print()
 
-#if statements
+#########################if statements########################
 input2 = input("Type a number between 1 and 10")
 if int(input2) > 10 or int(input2) < 0:
   print("Invalid Number")
@@ -86,7 +111,7 @@ else:
   ("password incorrect!")
 print()
 
-#for loops
+#########################for loops########################
 clist = ["Canada","USA","Mexico"]
 for state in clist:
   print(state)
@@ -109,7 +134,7 @@ for x in range(100,200):
 print(loop_sum)
 print()
 
-#while loop
+#########################while loop########################
 i = 0
 while i < len(clist):
   print(clist[i])
@@ -127,7 +152,7 @@ while i < 10:
     i+=1
 print
 
-#functions
+#########################functions########################
 def sum_list():
   mylist2 = [1,2,3,4,5]
   print(sum(mylist2))
@@ -153,7 +178,7 @@ def add():
 add()
 print
 
-#Lists
+#########################Lists########################
 states = ["Alabama","Alaska","Arizona","Arkansas","California","Colorado",
   "Connecticut","Delaware","Florida","Georgia","Hawaii","Idaho","Illinois",
   "Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland",
@@ -167,7 +192,7 @@ for i in range(len(states)):
     print(states[i])
 print
 
-#List operations
+#########################List operations########################
 y = [6,4,2]
 y.extend([12,8,4])
 print(y)
@@ -175,7 +200,7 @@ y[1] = 3
 print(y)
 print
 
-#Sorting List
+#########################Sorting List########################
 def takefirst(elem):
     return elem[0]
 x = [ (3,6),(4,7),(5,9),(8,4),(3,1)]
@@ -189,7 +214,7 @@ x.sort(key=takeSecond)
 print(x)
 print
 
-#Range Function
+#########################Range Function########################
 my_list = list(range(1, 1001))
 
 print(min(my_list))
@@ -206,21 +231,21 @@ print(even_list)
 print(odd_list)
 print
 
-#Dictionary
+#########################Dictionary########################
 countries = {'United States' : 'USA', 'Germany' : 'GER'}
 for i in countries:
   print(i, countries[i])
 
-#Read a file
+#########################Read a file########################
 #f = open("demofile.txt", "r")
 #f.read() 
 #error message: file not accessible
 
-#Write file
+#########################Write file########################
 #f.write('take it easy')
 #f.write("open(“text.txt”)")
 
-#Nested Loops
+#########################Nested Loops########################
 for i in range(3):
   for j in range(3):
     print(i,j)
@@ -233,13 +258,13 @@ for i in range(len(persons)):
 
 
 
-#Slices
+#########################Slices########################
 pizzas = ["Hawaii","Pepperoni","Fromaggi","Napolitana","Diavoli"]
 print(pizzas[2:4])
 string = "hello world"
 print(string[6:11])
 
-#Multiple Return
+#########################Multiple Return########################
 def func1(a,b):
   sum1 = a+b
   list1 = [a,b]
@@ -256,19 +281,19 @@ def five_var(a,b):
   return one,two,three,four,five
 print(five_var(5,17))
 
-#Scope
+#########################Scope########################
 def reduce_balance(balance):
   new_bal = balance - 100
   return new_bal
 initial_balance = 1000
 new_balance = reduce_balance(initial_balance)
 
-#Time and date
+#########################Time and date########################
 from datetime import date
 today = date.today()
 print("Today's date:", today)
 
-#Try-except
+#########################Try-except########################
 #Can try-except be used to catch invalid keyboard input?
 #yes
 #Can try-except catch the error if a file can‟t be opened?
@@ -276,6 +301,7 @@ print("Today's date:", today)
 #When would you not use try-except?
 #when dealing with errors, like out of memory 
 
+########################Class########################
 #Can you have more than one class in a file?
 #yes
 #Can multiple objects be created from the same class?
@@ -300,17 +326,27 @@ Tyler = Person()
 Tyler.set_age(21)  
 print(Tyler.get_age()) 
 
+
+#########################Getter and Setter########################
 #Why would you use getter and setter methods?
 #ensures data encapsulation, which avoids direct access to a specific variable 
 
+########################Modules########################
+#Import the math module and call the sin function
 import math
 print(math.sin(6))
-
+#Create your own module with the function snake()
 def snake():
-  print("ssss im a slithery lil snake ")
+  print("ratttle im a rattle snake")
+
 import main
 main.snake()
 
+########################Inheritance########################
+#Create a new class that inherits from the class App
+class newApp(app):
+  pass
+#Try to create a class that inherits from two super classes (multiple inheritance)
 class Base1:
     pass
 
@@ -320,21 +356,25 @@ class Base2:
 class MultiClass(Base1, Base2):
     pass
 
+########################Static Method########################
 #Can a method inside a class be called without creating an object?
 #yes - this is called a static method
 #Why does not everybody like static methods?
 #Static methods have limited use, because they don't have access to the attributes of an instance of a class, and they don't have access to the attributes of the class itself. Its not the best option for long-term use.
 
+########################Iterable########################
 #What is an iterable?
 #An iteratable is a Python object that can be used as a sequence. You can go to the next item of the sequence using the next() method. It’s a container object: it can only return one of its element at the time. 
 #Which types of data can be used with an iterable?
 #Examples of iterables include all sequence types (such as list , str , and tuple ) and some non-sequence types like dict , file objects, and objects of any classes you define with an __iter__() method or with a __getitem__() method that implements Sequence semantics
 
+########################ClassMethod########################
 #What is a classmethod?
 #A class method is a method that’s shared among all objects. Class methods can be can be called from instances and from the class itself
 #How does a classmethod differ from a staticmethod?
 #static method is not bound to any one class, while a class method is
 
+########################Multiple Inheritance########################
 #Do all programming languages support multiple inheritance?
 #No - one example being java
 #Why would you not use multiple inheritance?
